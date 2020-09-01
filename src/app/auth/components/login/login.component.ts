@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {BackendErrorsInterface} from '../../../shared/types/backendErrors.interface';
 import {select, Store} from '@ngrx/store';
-import {RegisterRequestInterface} from '../../types/registerRequest.interface';
-import {registerAction} from '../../store/actions/register.action';
 import {isSubmittingSelector, validationErrorsSelector} from '../../store/selectors';
+import {LoginRequestInterface} from '../../types/loginRequest.interface';
+import {loginAction} from '../../store/actions/login.action';
 
 @Component({
   selector: 'app-login',
@@ -33,10 +33,10 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-    const request: RegisterRequestInterface = {
+    const request: LoginRequestInterface = {
       user: this.form.value
     };
-    this.store.dispatch(registerAction({request}));
+    this.store.dispatch(loginAction({request}));
   }
 
   private initializeValues(): void {
