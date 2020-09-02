@@ -8,14 +8,20 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AuthModule} from './auth/auth.module';
 import {EffectsModule} from '@ngrx/effects';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {TopBarModule} from './shared/modules/top-bar/topBar.module';
+import {AuthInterceptor} from './shared/services/authInterceptor.service';
+import {PersistanceService} from './shared/services/persistance.service';
+import {GlobalFeedModule} from './globalFeed/globalFeed.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
+    TopBarModule,
     AppRoutingModule,
     AuthModule,
     HttpClientModule,
@@ -25,8 +31,16 @@ import {HttpClientModule} from '@angular/common/http';
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
+    GlobalFeedModule
   ],
-  providers: [],
+  providers: [
+    PersistanceService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private http: HttpClient) {
   }
 
-  getUser(response: AuthResponseInterface): CurrentUserInterface{
+  getUser(response: AuthResponseInterface): CurrentUserInterface {
     return response.user;
   }
 
@@ -28,5 +28,10 @@ export class AuthService {
     const url = `${environment.apiUrl}/users/login`;
     return this.http.post<AuthResponseInterface>(url, data)
       .pipe(map(this.getUser));
+  }
+
+  getCurrentUser(): Observable<CurrentUserInterface> {
+    const url = `${environment.apiUrl}/user`;
+    return this.http.get(url).pipe(map(this.getUser));
   }
 }
