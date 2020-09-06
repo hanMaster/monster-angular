@@ -1058,6 +1058,13 @@
   dependencies:
     tslib "^2.0.0"
 
+"@ngrx/router-store@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-10.0.0.tgz#e162e69da138f5a3e2d194f9e81d76d117cd2124"
+  integrity sha512-naK+IlgTQNEWWlKndQIBS/EQZ2h3pRF4owF+4kVpn+OI5Il7+Nugf0spj+0IFGd21Z7YvBe9C54SQPOPP4HARg==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngrx/store-devtools@^10.0.0":
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-10.0.0.tgz#018716afd3df89bd2fa1f603966878f82e80d727"
@@ -6847,6 +6854,15 @@ query-string@^4.1.0:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
+query-string@^6.13.1:
+  version "6.13.1"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.13.1.tgz#d913ccfce3b4b3a713989fe6d39466d92e71ccad"
+  integrity sha512-RfoButmcK+yCta1+FuU8REvisx1oEzhMKwhLUNcepQTPGcNMp1sIqjnfCtfnvGSQZQEhaBHvccujtWoUV3TTbA==
+  dependencies:
+    decode-uri-component "^0.2.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -7783,6 +7799,11 @@ speed-measure-webpack-plugin@1.3.3:
   dependencies:
     chalk "^2.0.1"
 
+split-on-first@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/split-on-first/-/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
+  integrity sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==
+
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/split-string/-/split-string-3.1.0.tgz#7cb09dda3a86585705c64b39a6466038682e8fe2"
@@ -7892,6 +7913,11 @@ strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
   integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
+
+strict-uri-encode@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
+  integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
 
 string-width@^3.0.0, string-width@^3.1.0:
   version "3.1.0"
