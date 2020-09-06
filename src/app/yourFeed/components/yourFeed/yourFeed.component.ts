@@ -6,6 +6,6 @@ import {Component} from '@angular/core';
 })
 export class YourFeedComponent {
 
-  apiUrl = 'articles/feed';
+  apiUrl = 'articles/article';
 
 }

@@ -12,7 +12,14 @@ const routes = [
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes), FeedModule, BannerModule, PopularTagsModule, FeedTogglerModule],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    FeedModule,
+    BannerModule,
+    PopularTagsModule,
+    FeedTogglerModule
+  ],
   declarations: [GlobalFeedComponent]
 })
 

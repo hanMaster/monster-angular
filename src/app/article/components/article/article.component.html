@@ -1,0 +1,8 @@
+<h1>Article</h1>
+
+<app-loading *ngIf="isLoading$ | async"></app-loading>
+
+<ng-container *ngIf="article">
+
+<p>{{article.title}}</p>
+</ng-container>
